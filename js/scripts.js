@@ -33,7 +33,7 @@ $(document).ready(function() {
             console.log(wordsArray[i]);
 
           }
-          j = vowels.length;
+          //j = vowels.length;
           //k = lettersArray.length;
 
       } else {
@@ -50,13 +50,19 @@ $(document).ready(function() {
             }
 
           }
-          console.log(tempCons);
+          //console.log(tempCons);
           wordsArray[i] = wordsArray[i].slice(tempCons.length);
           wordsArray[i] = wordsArray[i].concat(tempCons + "ay");
           console.log(wordsArray[i]);
 
           //move tempCons to end of the word along 'ay' and slice first characters
       }
+    //  wordInput = wordInput.replace(letterArray[j], '-');
     }
+  
+    var newString = wordsArray.toString();
+    newString = newString.replace(/,/g," ");
+    console.log(newString);
+
   });
 });

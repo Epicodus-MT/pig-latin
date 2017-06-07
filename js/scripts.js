@@ -6,7 +6,7 @@ $(document).ready(function() {
   var wordsArray = [];
   wordsArray = phraseInput.split(' ');
   // var emptyWordArray = [];
-    $("#results").text("Pig Latin translation: " + phraseInput);
+    //$("#results").text("Pig Latin translation: " + phraseInput);
     //$("#form").hide();
     //$("h2").hide();
 
@@ -59,10 +59,12 @@ $(document).ready(function() {
       }
     //  wordInput = wordInput.replace(letterArray[j], '-');
     }
-  
+
     var newString = wordsArray.toString();
     newString = newString.replace(/,/g," ");
     console.log(newString);
+    $("#results").show();
+    $("#newPhrase").text(newString);
 
   });
 });
